@@ -3,7 +3,7 @@ import outcomeImg from "../../assets/outcome.svg";
 import totalImg from "../../assets/total.svg";
 import { useTransactions } from "../../hooks/useTransactions";
 
-import { Container } from "./styles";
+import { Container, HighlightBackground } from "./styles";
 
 export function Summary() {
   const { transactions } = useTransactions();
@@ -26,6 +26,13 @@ export function Summary() {
       total: 0,
     }
   );
+
+  // let checkIsPositive = () => {
+  //   if (sumarry.total > 0) {
+  //     return true;
+  //   }
+  //   return false;
+  // }
 
   return (
     <Container>
@@ -53,7 +60,7 @@ export function Summary() {
           }).format(sumarry.withdraws)}
         </strong>
       </div>
-      <div className="highlight-background">
+      <HighlightBackground>
         <header>
           <p>Total</p>
           <img src={totalImg} alt="Total" />
@@ -64,7 +71,7 @@ export function Summary() {
             currency: "BRL",
           }).format(sumarry.total)}
         </strong>
-      </div>
+      </HighlightBackground>
     </Container>
   );
 }

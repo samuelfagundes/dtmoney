@@ -25,10 +25,10 @@ export const Container = styled.div`
       font-weight: 500;
       line-height: 3rem;
     }
-
-    &.highlight-background {
-      background: var(--green);
-      color: #fff;
-    }
   }
+`;
+
+export const HighlightBackground = styled.div`
+  background: var(--green);
+  color: #fff;
 `;

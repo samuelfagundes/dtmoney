@@ -4,11 +4,15 @@
   "private": true,
   "dependencies": {
     "axios": "^0.26.1",
+    "material-design-icons": "^3.0.1",
+    "material-icons": "^1.11.1",
     "miragejs": "^0.1.43",
     "polished": "^4.2.2",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
+    "react-icons": "^4.4.0",
     "react-modal": "^3.14.4",
+    "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.0",
     "styled-components": "^5.3.5",
     "web-vitals": "^2.1.0"

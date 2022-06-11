@@ -1,8 +1,13 @@
 import { useTransactions } from "../../hooks/useTransactions";
-import { Container } from "./styles";
+
+import { MdDeleteOutline } from "react-icons/md";
+
+import { Container, DeleteButton } from "./styles";
 
 export function TransactionsTable() {
-  const { transactions } = useTransactions();
+  const { transactions, deleteTransaction } = useTransactions();
+
+  console.log(transactions);
 
   return (
     <Container>
@@ -31,6 +36,11 @@ export function TransactionsTable() {
                 {new Intl.DateTimeFormat("pt-BT").format(
                   new Date(transaction.createdAt)
                 )}
+              </td>
+              <td>
+                <DeleteButton onClick={() => deleteTransaction(transaction.id)}>
+                  <MdDeleteOutline size={25} color="#e52e4d" />
+                </DeleteButton>
               </td>
             </tr>
           ))}

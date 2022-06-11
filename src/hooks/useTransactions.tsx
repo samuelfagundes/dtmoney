@@ -5,6 +5,7 @@ import {
   ReactNode,
   useContext,
 } from "react";
+
 import { api } from "../services/api";
 
 interface Transaction {
@@ -25,6 +26,7 @@ interface TransactionsProviderProps {
 interface TransactionsContextData {
   transactions: Transaction[];
   createTransaction: (transaction: TransactionInput) => Promise<void>;
+  deleteTransaction: (id: number) => void;
 }
 
 const TransactionsContext = createContext<TransactionsContextData>(
@@ -50,8 +52,15 @@ export function TransactionsProvider({ children }: TransactionsProviderProps) {
     setTransactions([...transactions, transaction]);
   }
 
+  function deleteTransaction(id: number): void {
+    setTransactions(transactions.filter((itemId: any) => itemId.id !== id));
+    console.log(transactions);
+  }
+
   return (
-    <TransactionsContext.Provider value={{ transactions, createTransaction }}>
+    <TransactionsContext.Provider
+      value={{ transactions, createTransaction, deleteTransaction }}
+    >
       {children}
     </TransactionsContext.Provider>
   );
