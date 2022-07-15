@@ -26,16 +26,10 @@ cd dtmoney
 yarn install
 ```
 ou
-```
-npm install
-```
+
 
 ### Rodar o projeto
 
 ```
 yarn dev
-```
-ou
-```
-npm dev
 ```
