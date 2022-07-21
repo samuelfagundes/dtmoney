@@ -2,6 +2,13 @@
 
 Aplicação de controle de finanças
 
+## Tecnologias utilizdas
+
+* React
+* SASS
+* MirageJS
+* Typescript
+
 ## Vercel
 
 Você pode ver o projeto atráves [desse link](https://dtmoney-dusky-alpha.vercel.app/)
